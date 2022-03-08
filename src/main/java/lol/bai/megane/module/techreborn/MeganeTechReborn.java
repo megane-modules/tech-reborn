@@ -71,8 +71,4 @@ public class MeganeTechReborn implements MeganeModule {
         registrar.addEnergyInfo(TechReborn.MOD_ID, 0x800800, "E");
     }
 
-    private int[] a(int... ints) {
-        return ints;
-    }
-
 }

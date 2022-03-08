@@ -1,8 +1,5 @@
 package lol.bai.megane.module.techreborn.provider;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import reborncore.common.recipes.RecipeCrafter;
 import techreborn.blockentity.machine.GenericMachineBlockEntity;
 
@@ -11,10 +8,8 @@ public class GenericMachineProgressProvider extends AbstractInventoryProgressPro
     private RecipeCrafter crafter;
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, GenericMachineBlockEntity genericMachineBlockEntity) {
-        super.setContext(world, pos, player, genericMachineBlockEntity);
-
-        this.crafter = genericMachineBlockEntity.getRecipeCrafter();
+    protected void init() {
+        this.crafter = getObject().getRecipeCrafter();
     }
 
     @Override
